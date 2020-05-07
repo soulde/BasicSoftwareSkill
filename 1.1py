@@ -4,6 +4,8 @@ author:李雨璟
 edit in May/07/2020
 """
 
+
+# question 1 who eat the cakes1
 import numpy as np
 
 #trasfer everyone's comment to a matrix
