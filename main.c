@@ -27,6 +27,6 @@ int main()
 		if (chicken + 2 * rabbits == 45)
 			printf_s("chicken:%d\trabbit:%d\n", chicken, rabbits);
 		
-
+	}
 	return 0;
 }
