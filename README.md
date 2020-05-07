@@ -2,4 +2,4 @@
 Basic Software Skill homework
 
 
-description type: homework(classtimes.question)
+Description type: homework(classtimes.question)
