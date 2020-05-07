@@ -1,6 +1,7 @@
 /*
 author:李雨璟
-edit in May/7/2020
+
+edit in May/07/2020
 */
 
 #include<stdio.h>
