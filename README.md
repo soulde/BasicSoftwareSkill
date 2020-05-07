@@ -1,5 +1,4 @@
 # BasicSoftwareSkill
 Basic Software Skill homework
 
-
-Description type: homework(classtimes.question)
+Name formate: classtimes.question.suffix
