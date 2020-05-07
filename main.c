@@ -1,3 +1,8 @@
+/*
+author:李雨璟
+edit in May/7/2020
+*/
+
 #include<stdio.h>
 
 
@@ -10,7 +15,7 @@ int main()
 
 	////////////////////////////////////////////
 	/*
-	question rabbits and chicken in the same cage
+	question 2 rabbits and chicken in the same cage
 	*/
 
 	int chicken = 0;
