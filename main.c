@@ -10,7 +10,7 @@ int main()
 
 	////////////////////////////////////////////
 	/*
-	question 1 rabbits and chicken in the same cage
+	question rabbits and chicken in the same cage
 	*/
 
 	int chicken = 0;
