@@ -25,7 +25,7 @@ int main()
 	iter(p, printNum,0);
 
 	//clear
-	clear(p);
+	delete(p,0);
 
 	return 0;
 
