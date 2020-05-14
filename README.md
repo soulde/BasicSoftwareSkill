@@ -1,4 +1,4 @@
 # BasicSoftwareSkill
 Basic Software Skill homework
 
-Name formate: classtimes.question.suffix
+Name formate: "homework"classtimes.question.suffix
