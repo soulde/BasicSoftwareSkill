@@ -1,6 +1,19 @@
 #include"Node.h"
 
 
+int homeworkFunction(Node* p)
+{
+	if (!p)
+		return -1;
+
+	if (p->numData % 3 == 2)
+	{
+		remove(p);
+	}
+
+	return 0;
+}
+
 int fillData(Node* NodePointer, int numData, char charData) 
 {
 	if (!NodePointer)
@@ -14,7 +27,7 @@ int fillData(Node* NodePointer, int numData, char charData)
 	return 0;
 }
 
-int  iter(Node* head, int fun(Node* node)) //use the fun to every node from head to tail
+int  iter(Node* head, int fun(Node* node),int delTag) //use the fun to every node from head to tail
 {	
 	int flag = 0;
 	Node* p = head;
@@ -27,10 +40,12 @@ int  iter(Node* head, int fun(Node* node)) //use the fun to every node from head
 		//pass head information
 		p = p->next;
 
-		for (int i = 1; p != NULL; p = temp, i++)
+		for (; p != NULL;)
 		{
-			temp = p->next;
-
+			if (delTag)
+			{
+				temp = p->next;
+			}
 			if (!fun(p)) {
 				flag++;
 
@@ -43,6 +58,10 @@ int  iter(Node* head, int fun(Node* node)) //use the fun to every node from head
 			/*for debug
 			printf_s("done\n");
 			*/
+			if (delTag)
+				p = temp;
+			else
+				p = p->next;
 		}
 	}
 
@@ -54,10 +73,17 @@ int printData(Node* node)
 {
 	if (!node)
 		return -1;
-	else
+	else 
 		return printf_s("%d\t%c\n", node->numData, node->unionData.charData);
 }
 
+int printNum(Node* node)
+{
+	if (!node)
+		return -1;
+	else
+		return printf_s("%d\n", node->numData);
+}
 
 Node* creatLinklist() 
 {
@@ -168,6 +194,18 @@ int delete(Node* head, int tag)		//tag is the deleted one,when tag = 0 whole lin
 
 }
 
+int remove(Node* del) //remove the Node after del
+{
+
+	Node* p = del->next;
+	if (!p)
+		return -1;
+
+	del->next = p->next;
+	free(p);
+
+	return 0;
+}
 int clear(Node* head)	//free all nodes but remain the head
 {	
 
@@ -177,7 +215,7 @@ int clear(Node* head)	//free all nodes but remain the head
 	}
 
 	//delete all nodes
-	iter(head, free);
+	iter(head, free,1);
 
 	head->numData = 0;
 
