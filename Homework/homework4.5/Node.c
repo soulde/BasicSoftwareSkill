@@ -82,7 +82,7 @@ int printNum(Node* node)
 	if (!node)
 		return -1;
 	else
-		return printf_s("%d\n", node->numData);
+		return printf_s("%d\t", node->numData);
 }
 
 Node* creatLinklist() 

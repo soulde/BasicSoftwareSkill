@@ -9,7 +9,7 @@ int main()
 	p = creatLinklist();
 
 	//insert data
-	for (int i = 0; i < 30; i++)
+	for (int i = 0; i < 100; i++)
 	{
 		addNode(p, i, i + 1, 0);
 	}
